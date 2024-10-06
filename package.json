@@ -1,0 +1,15 @@
+{
+  "name": "nexus",
+  "version": "1.0.0",
+  "description": "Welcome to **Nexus**, an open-source Discord bot designed to empower your server with versatile and dynamic features! Whether you're here to contribute code, suggest improvements, or simply use the bot, you're part of something awesome. 🎉",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "src/index.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.16.3"
+  }
+}
