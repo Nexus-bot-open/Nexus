@@ -14,7 +14,19 @@ const userEconomySchema = new mongoose.Schema({
         type: Number,
         default: 0, 
     },
-}, { timestamps: true }); 
+    dailyClaimed: {
+        type: Date,
+        default: null,
+    },
+    weeklyClaimed: {
+        type: Date,
+        default: null,
+    },
+    monthlyClaimed: {  
+        type: Date,
+        default: null,
+    },
+}, { timestamps: true });
 
 const UserEconomy = mongoose.model('UserEconomy', userEconomySchema);
 
