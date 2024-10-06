@@ -17,6 +17,10 @@ module.exports = {
         const recipient = interaction.options.getUser('user');
         const amount = interaction.options.getInteger('amount');
 
+        if (recipient.bot) {
+            return interaction.reply({ content: 'You cannot give money to bots.', ephemeral: true });
+        }
+
         await UserEconomy.updateOne({ userId: recipient.id }, { $inc: { balance: amount }, upsert: true });
 
         const moneyGiveEmbed = new EmbedBuilder()
